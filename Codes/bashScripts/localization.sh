@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROTEIN_NAME="1dfj"
+PROTEIN_NAME="lcn2"
 
 # Define the MATLAB script
 MATLAB_SCRIPT="../bashMatlab"

@@ -15,10 +15,16 @@ cd('../Registration');
 addpath(genpath(pwd));
 cd('../bashMatlab');
 
-% Run the file and save results
-x_n_indx = readFileMakeXnIndx_v2('run1_Y30_chain_A_xyz.txt,run1_Y30_chain_B_xyz.txt', ...
-                                  'run1_Y30_chain_A_indx.txt,run1_Y30_chain_B_indx.txt', ...
-                                  'run1_Y30crosslink_xyz.txt', 'run1_Y30crosslink_indx.txt');
+% Construct the file paths for each argument
+arg1 = strcat('../Registration/', protein_name, 'Data/run1_Y30_chain_A_xyz.txt,../Registration/', protein_name, 'Data/run1_Y30_chain_B_xyz.txt');
+arg2 = strcat('../Registration/', protein_name, 'Data/run1_Y30_chain_A_indx.txt,../Registration/', protein_name, 'Data/run1_Y30_chain_B_indx.txt');
+arg3 = strcat('../Registration/', protein_name, 'Data/run1_Y30crosslink_xyz.txt');
+arg4 = strcat('../Registration/', protein_name, 'Data/run1_Y30crosslink_indx.txt');
+
+% Run the file and save results using the concatenated paths as arguments
+x_n_indx = readFileMakeXnIndx_v2(arg1, arg2, arg3, arg4);
+
+% Save the result to a MAT file
 save('x_n_index_run1_Y30.mat', 'x_n_indx');
 
 % Change directory and add paths

@@ -8,6 +8,7 @@ pdb_folder = sys.argv[1]
 pdbName1 = sys.argv[2]
 pdbName2 = sys.argv[3]
 output_csv = sys.argv[4]
+PROTEIN_NAME = sys.argv[5]
 
 # Define file paths
 pdb_file1 = os.path.join(pdb_folder, pdbName1)
@@ -31,7 +32,7 @@ print("Python script executed.")
 
 # Step 4: Run the PyMOL command to create crosslinks and save the CSV
 print(f"Creating crosslinks and saving to {output_csv}...")
-cmd.do("createEqnCross(['chain_A', 'chain_B'], '../crosslinks/1dfjCLs/{}', 'model1')".format(output_csv))
+cmd.do(f"createEqnCross(['chain_A', 'chain_B'], '../crosslinks/{PROTEIN_NAME}CLs/{output_csv}', 'model1')")
 print(f"Crosslinks created and saved to {output_csv}.")
 
 # Step 5: Close PyMOL

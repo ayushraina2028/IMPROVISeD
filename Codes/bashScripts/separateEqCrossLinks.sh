@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Input file with the data
-PROTEIN_NAME="1dfj"
-input_file="../crosslinks/1dfjCLs/eq_dists_prots_model1.csv"
+PROTEIN_NAME="lcn2"
+input_file="../crosslinks/${PROTEIN_NAME}CLs/eq_dists_prots_model1.csv"
 
 # Output files
-output_file_A="../crosslinks/1dfjCLs/eq_dists_chain_A.csv"
-output_file_B="../crosslinks/1dfjCLs/eq_dists_chain_B.csv"
+output_file_A="../crosslinks/${PROTEIN_NAME}CLs/eq_dists_chain_A.csv"
+output_file_B="../crosslinks/${PROTEIN_NAME}CLs/eq_dists_chain_B.csv"
 
 # Check if the input file exists
 if [ ! -f "$input_file" ]; then

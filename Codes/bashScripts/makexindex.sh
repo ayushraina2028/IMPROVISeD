@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROTEIN_NAME="1dfj"
+PROTEIN_NAME="lcn2"
 
 # Run the Python script with PyMOL
 path="../Registration/makeindex.py"

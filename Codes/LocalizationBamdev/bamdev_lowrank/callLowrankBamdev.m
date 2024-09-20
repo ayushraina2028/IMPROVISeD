@@ -59,7 +59,7 @@ function [Y, infos] = callLowrankBamdev(eq1file, eq2file, crosslinksfile, crossl
     RandStream.setGlobalStream(s);
     % Select optimization algorithm
     %methodName = 'Gradient Descent';
-    methodName = 'Trust Region';
+    methodName = 'Gradient Descent';
 
     % Parameters
     params.pmax = embed_dim;
