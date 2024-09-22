@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define file paths
-PROTEIN_NAME="mmp9"
+PROTEIN_NAME="1dfj"
 FOLDER_LOCATION="../../Examples"
 FOLDER_PATH="$FOLDER_LOCATION/$PROTEIN_NAME"
 
@@ -28,7 +28,7 @@ PYTHON_SCRIPT="../bashPython/automate1.py"
 
 # Run pymol in command line
 echo "Running pymol with the ${PYTHON_SCRIPT}..."
-pymol -cq -d "import sys; sys.argv = ['$PYTHON_SCRIPT','$FOLDER_PATH', '${chain_A}.pdb', '${chain_B}.pdb', '$OUTPUT_CSV']; exec(open('$PYTHON_SCRIPT').read())"
+pymol -cq -d "import sys; sys.argv = ['$PYTHON_SCRIPT','$FOLDER_PATH', '${chain_A}.pdb', '${chain_B}.pdb', '$OUTPUT_CSV', '$PROTEIN_NAME']; exec(open('$PYTHON_SCRIPT').read())"
 
 CSV_SOURCE="eq_dists_prots_model1.csv"
 DESTINATION_CSV="../crosslinks/${PROTEIN_NAME}CLs/"

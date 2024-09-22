@@ -23,8 +23,22 @@ Codes/LocalizationBamdev/1dfjResult/
 
 7. Registration Step - run the runRegiste.sh script to do the registration, final files will be saved in Registration/proteinName/
 
+
+Visualizing 1dfj structure
 Go to Codes/Registration/1dfjData/
 1. pymol ../../../Examples/1dfj/chain_A.pdb ../../../Examples/1dfj/chain_B.pdb
+2. PYMOL> run ../showCoords.py
+3. PYMOL> showRegPDBs('chain_A,chain_B','X_noref_run1Y30.csv', 'run1_Y30_chain_A_indx.txt,run1_Y30_chain_B_indx.txt')
+
+Visualizing lcn2 structure
+Go to Codes/Registration/lcn2Data/
+1. pymol ../../../Examples/lcn2/chain_A.pdb ../../../Examples/lcn2/chain_B.pdb
+2. PYMOL> run ../showCoords.py
+3. PYMOL> showRegPDBs('chain_A,chain_B','X_noref_run1Y30.csv', 'run1_Y30_chain_A_indx.txt,run1_Y30_chain_B_indx.txt')
+
+Visualizing mmp9 structure
+Go to Codes/Registration/mmp9Data/
+1. pymol ../../../Examples/mmp9/chain_A.pdb ../../../Examples/mmp9/chain_B.pdb
 2. PYMOL> run ../showCoords.py
 3. PYMOL> showRegPDBs('chain_A,chain_B','X_noref_run1Y30.csv', 'run1_Y30_chain_A_indx.txt,run1_Y30_chain_B_indx.txt')
 

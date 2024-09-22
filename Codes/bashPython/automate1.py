@@ -10,6 +10,8 @@ pdbName2 = sys.argv[3]
 output_csv = sys.argv[4]
 PROTEIN_NAME = sys.argv[5]
 
+print(PROTEIN_NAME, "Ayush")
+
 # Define file paths
 pdb_file1 = os.path.join(pdb_folder, pdbName1)
 pdb_file2 = os.path.join(pdb_folder, pdbName2)
